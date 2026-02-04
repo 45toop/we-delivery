@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #02040c;
+  color: #e6f1ff;
+}
+
+/*==========FOOD SECTIONS=========== */
+#foods{margin:0}
+
+.food-card{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  cursor:pointer;
+  position:relative;
+}
+
+.food-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.food-name{
+  position:relative;
+  background:rgba(0,0,0,.65);
+  color:#fff;
+  padding:20px;
+  font-size:1.2rem;
+  text-align:center;
+}
+
+
+
+/* BLOCKS */
+.blocks {
+  padding: 80px 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.block-card {
+  background: linear-gradient(160deg,#0a1330,#060b1a);
+  padding: 36px;
+  border-radius: 20px;
+}
+
+/* UTILITY */
+.utility {
+  padding: 80px 20px;
+}
+
+.utility-card {
+  background: linear-gradient(160deg,#0a1330,#060b1a);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* SHOPS */
+.shops {
+  padding: 80px 20px;
+}
+
+.shop-card {
+  opacity: 0.35;
+  border: 1px dashed rgba(255,255,255,0.2);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+.sub-header{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.sub-header h1{
+  color:#0d6efd;
+  margin-bottom:6px;
+}
+
+.sub-header p{
+  color:#aaa;
+  font-size:.9rem;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:10px;
+  color:#0d6efd;
+  text-decoration:none;
+  font-size:.85rem;
+}
+
+.services-page{
+  width:100%;
+}
+
+.service-block{
+  min-height:100vh;
+  position:relative;
+}
+
+.service-block img{
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+}
+
+.service-info{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,.6);
+  padding:20px;
+}
+
+.service-info h2{
+  margin:0;
+  color:#0d6efd;
+}
+
+.service-info p{
+  font-size:.9rem;
+  color:#eee;
+}
+
+
+/*==============supplier=============================*/
+.suppliers-link{
+  width:100%;
+  text-align:center;
+  margin:30px 0 20px;
+}
+
+.suppliers-link a{
+  font-size:1.4rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#0d6efd;
+  text-decoration:none;
+}
+
+.suppliers-link a:hover{
+  text-shadow:0 0 12px rgba(13,110,253,.8);
+}
+
+
+
+
+/*=========================== CART========================= */
+#cart-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+/* CART DRAWER */
+#cart-drawer{
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  transition: bottom .35s ease;
+  z-index: 9999;
+}
+
+#cart-drawer.open{
+  bottom: 0;
+}
+
+/* CART ITEMS */
+#cart-items{
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+/*================ CONFIRM ORDER — KAWAIDA CHINI============== */
+#confirm-order{
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+
+  /* khaki gradient */
+  background: radial-gradient(
+    circle at top left,
+    #d6cf8a,
+    #bdb76b 60%,
+    #a9a35a
+  );
+
+  color: #0f5132; /* green words */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .5px;
+
+  cursor: pointer;
+  z-index: 1001;
+
+  /* artist shadows */
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,.35),
+    inset 0 -4px 6px rgba(0,0,0,.25),
+    0 10px 25px rgba(0,0,0,.45);
+
+  /* smooth motion */
+  transition: transform .15s ease, box-shadow .15s ease;
+  animation: confirmPulse 2.8s infinite ease-in-out;
+}
+
+/* green text glow */
+#confirm-order{
+  text-shadow: 0 0 6px rgba(15,81,50,.45);
+}
+
+/* hover */
+#confirm-order:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,.4),
+    inset 0 -4px 6px rgba(0,0,0,.3),
+    0 14px 30px rgba(0,0,0,.55);
+}
+
+/* press */
+#confirm-order:active{
+  transform: scale(.94);
+  box-shadow:
+    inset 0 6px 10px rgba(0,0,0,.35),
+    0 6px 12px rgba(0,0,0,.4);
+}
+
+/* subtle breathing */
+@keyframes confirmPulse{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+
+
+/*==============services===========================*/
+body.black{
+  background:#000;
+  color:#fff;
+}
+
+.services-page{
+  padding:20px;
+  display:grid;
+  gap:24px;
+}
+
+.service-big{
+  border-radius:20px;
+  overflow:hidden;
+  background:#0a0a0a;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.service-big:hover{
+  transform:scale(1.02);
+}
+
+.service-big img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.service-big h2{
+  margin:16px;
+  font-size:22px;
+}
+
+.service-big p{
+  margin:0 16px 16px;
+  color:#aaa;
+}
+
+
+
+/*===============cargo====================*/
+.cargo-list img{
+  width:100%;
+  margin-bottom:16px;
+  border-radius:16px;
+}
+
+
+
+
+/*======================suppliers==================*/
+
+.suppliers-page{
+  padding:20px;
+  display:grid;
+  gap:16px;
+}
+
+.supplier-card{
+  background:#0a0a0a;
+  border:1px solid #222;
+  padding:18px;
+  border-radius:16px;
+  cursor:pointer;
+}
+
+.supplier-card h3{
+  margin:0 0 6px;
+}
+
+.supplier-card p{
+  margin:0 0 8px;
+  color:#aaa;
+}
+
+
+.location-box{
+  background:#0a0a0a;
+  border:1px solid #222;
+  padding:16px;
+  border-radius:16px;
+  margin:20px;
+}
+
+.location-box input{
+  width:100%;
+  margin-top:10px;
+  padding:14px;
+  background:#000;
+  border:1px solid #222;
+  color:#fff;
+  border-radius:12px;
+}
+
+
+.food-card{
+  min-height: 300px;
+  background: red;
+}
+
+
+
+/* =======================
+   HERO CARD (UDONGO THEME)
+======================= */
+
+.hero-card{
+  max-width: 900px;
+  margin: 60px auto 40px;
+  padding: 32px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #6b4f3f,   /* udongo mweusi */
+    #8a6a52    /* udongo wa kati */
+  );
+
+  color: #f5f1ec;
+  text-align: center;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+/* TITLE */
+.hero-title{
+  color: #e6fffa;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+/* TEXT */
+.hero-card p{
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: .95;
+  margin-bottom: 10px;
+}
+
+/* SMALL LINE */
+.hero-small{
+  font-size: 14px;
+  color: #d4f8f0;
+  font-weight: 600;
+}
+
+/* MOBILE FIX */
+@media(max-width:600px){
+  .hero-card{
+    margin: 30px 14px;
+    padding: 26px 18px;
+  }
+
+  .hero-title{
+    font-size: 26px;
+  }
+}
+
+
+
+/* =======================
+   BRAND + HERO CARD
+======================= */
+
+.brand {
+  padding: 80px 16px 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ZUIA BRAND KUATHIRI NDANI YA CARD */
+.brand > h1,
+.brand > p {
+  display: none;
+}
+
+
+
+/* =======================
+   HERO CARD (NDANI YA BRAND)
+======================= */
+
+.hero-card{
+  max-width: 900px;
+  padding: 32px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #6b4f3f,
+    #8a6a52
+  );
+
+  color: #f5f1ec;
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+/* TITLE NDANI YA CARD */
+.hero-card h1{
+  font-size: 32px;
+  color: #fdf6ee;
+  text-shadow: none;
+  margin-bottom: 18px;
+}
+
+/* MAANDISHI NDANI YA CARD */
+.hero-card p{
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: .95;
+  margin-bottom: 10px;
+}
+
+/* MSTARI MDOGO */
+.hero-small{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero-card{
+    padding: 26px 18px;
+  }
+
+  .hero-card h1{
+    font-size: 26px;
+  }
+}
+
+
+/* FORCE HERO CARD IONEKANE */
+.hero-card {
+  position: relative;
+  z-index: 5;
+  background-color: #6b4f3f !important;
+}
+
+
+
+
+/* WRAPPER YA LOGO (RING YA NJE) */
+.hero-logo{
+  width: 140px;
+  height: 140px;
+
+  padding: 10px;
+  border-radius: 50%;
+
+  /* ring ya nje (animated gradient) */
+  background: linear-gradient(
+    120deg,
+    #000000,
+    #1e7f43,
+    #e6d3b1,
+    #000000
+  );
+  background-size: 300% 300%;
+
+  animation: ringShift 6s ease-in-out infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  box-shadow: 0 14px 35px rgba(0,0,0,.45);
+}
+
+/* DUARA LA NDANI */
+.hero-logo img{
+  width: 100%;
+  height: 100%;
+
+  background: #f5f1ec; /* beige / udongo mweupe */
+  border-radius: 50%;
+
+  padding: 14px;
+  object-fit: contain;
+
+  /* ring ya pili (inner border) */
+  box-shadow: inset 0 0 0 3px rgba(0,0,0,.15);
+}
+
+/* ANIMATION YA RING */
+@keyframes ringShift{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+/* =======================
+   FOOD CARD
+======================= */
+.food-card{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;                                                                  cursor:pointer;
+  position:relative;
+}
+
+/* PICHA ZISIJAZE SCREEN */
+.food-card img{
+  width: 100%;
+  height: 100%;      /* 👈 HAPA NDIPO UNADHIBITI */
+  object-fit: cover; /* muhimu sana */
+  display: block;
+  position:absolute;
+  inset:0;
+}
+
+/* TEXT JUU YA PICHA */
+
+.food-name{                                                                                  position:relative;
+  background:rgba(0,0,0,.65);
+  color:#fff;
+  padding:20px;
+  font-size:1.2rem;
+  text-align:center;
+}

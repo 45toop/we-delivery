@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suppliers & Riders | WE 》 DELIVERY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="suppliers">
+
+<header class="sub-header">
+<!-- LOGO -->
+    <img src="image/Imag/logo.png" alt="We Delivery Logo" class="hero-logo">
+
+  <h1>Suppliers & Riders</h1>
+  <p>Huduma zinazokupelekea chakula popote</p>
+  <a href="index.html" class="back-link">← Rudi Home</a>
+</header>
+
+<body class="black">
+
+<header class="brand">
+  <h1>SUPPLIERS</h1>
+  <p>Chagua namba ya kupokea order</p>
+</header>
+
+<main class="suppliers-page">
+
+<div class="location-box">
+  <h3>Mahali Ulipo</h3>
+
+  <input id="block" placeholder="Block (mf. Block B)" />
+  <input id="room" placeholder="Room No (mf. 214)" />
+</div>
+
+  <div class="supplier-card" onclick="sendOrder('Mama Asha','+255713000111')">
+    <h3>jorion 1</h3>
+    <p>chuo</p>
+    <strong>+255 756759577</strong>
+  </div>
+
+  <div class="supplier-card" onclick="sendOrder('Mama Neema','+255754222333')">
+    <h3>jorion 2</h3>
+    <p>chuo</p>
+    <strong>+255 756759577</strong>
+  </div>
+
+  <div class="supplier-card" onclick="sendOrder('Mama Zainab','+255689555666')">
+    <h3>jorion 3</h3>
+    <p>chuo</p>
+    <strong>+255 756759577</strong>
+  </div>
+
+</main>
+
+<script>
+function sendOrder(name, phone){
+  const cart = JSON.parse(localStorage.getItem("we_order")) || [];
+
+  const block = document.getElementById("block").value || "N/A";
+  const room = document.getElementById("room").value || "N/A";
+
+  let text = "WE DELIVERY ORDER%0A";
+  text += "Location:%0A";
+  text += `Block: ${block}%0A`;
+  text += `Room: ${room}%0A%0A`;
+  text += "Items:%0A";
+
+  cart.forEach(item => {
+    text += `- ${item.name} (${item.price} TZS)%0A`;
+  });
+
+  window.location.href = `sms:${phone}?body=${text}`;
+}
+</script>
+
+</body>
+
+<main class="services-page">
+
+  <!-- SUPPLIERS -->
+
+  <section class="service-block">
+    <img src="image/Imag/mizigo.jpg" alt="begi">
+    <div class="service-info">
+      <h2>Shops</h2>
+      <p>
+        
+       maduka ya wafanya biashara Eneo la Dodoma.(huduma bado)
+        
+      </p>
+    </div>
+  </section>
+
+  <!-- RIDERS -->
+  <section class="service-block">
+    <img src="image/Imag/bodaboda.jpeg" alt="bodaboda">
+    <div class="service-info">
+      <h2>Riders</h2>
+      <p>
+        Bodaboda na riders wa delivery kwa kasi na usalama.
+        Wataonekana hapa baada ya kuthibitishwa.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  jorion // we deliver
+</footer>
+
+</body>
+</html>

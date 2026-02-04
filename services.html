@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | WE DELIVERY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body  class="services", class="black">
+
+<header class="brand">
+  <h1>WE 》 DELIVERY</h1>
+  <p>Chagua huduma</p>
+</header>
+
+<main class="services-page">
+  <div>
+   <img src="image/Imag/logo.png" alt="We Delivery Logo" class="hero-logo">
+  </div>
+
+  <!-- MAJI -->
+  <div class="service-big" onclick="sendSMS('Nahitaji delivery ya maji')">
+    <img src="image/Imag/ndoo.png" alt="maji">
+    <h2>MAJI</h2>
+    <p>Ndoo • Dumu • Chupa</p>
+  </div>
+
+  <!-- MIZIGO -->
+  <div class="service-big" onclick="location.href='cargo.html'">
+    <img src="image/Imag/mizigo.jpg" alt="begi">
+    <h2>MIZIGO</h2>
+    <p>Vifaa • Magunia • Mizigo mizito</p>
+  </div>
+
+  <!-- ABIRIA -->
+  <div class="service-big" onclick="sendSMS('Nahitaji bodaboda abiria')">
+    <img src="image/Imag/bodaboda.jpeg" alt="boda">
+    <h2>ABIRIA</h2>
+    <p>Bodaboda • Safari za karibu</p>
+  </div>
+
+</main>
+
+<script>
+function sendSMS(msg){
+  window.location.href = `sms:+255719343615?body=${encodeURIComponent(msg)}`;
+}
+</script>
+
+</body>
+</html>
