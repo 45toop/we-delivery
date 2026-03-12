@@ -1,303 +1,100 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="google-site-verification" content="wa8dmlls3FWY8rXn9GbjnmEGBJ4ilUigdfEjbCKQ4KU" />
-  <title>WE 》 DELIVERY</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>WE》DELIVERY</title>
+ <style>
 
-<style>
-    /* BACKGROUND YA PAGE */
-    body{
-      margin: 0;
-      background: #05070a;
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #fff;
-    }
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: #ffaa55;
+    background-size:cover;
+    font-family:sans-serif;
+}
 
-    /* BRAND */
-    .brand{
-      padding: 80px 16px 40px;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
+/* blur layer */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    backdrop-filter: blur(15px);
+}
 
-    /* HERO CARD */
-    .hero-card{
-      max-width: 900px;
-      padding: 32px 24px;
+/* scene */
+.scene{
+    width:200px;
+    height:200px;
+    perspective:600px;
+    position:relative;
+}
 
-      background: linear-gradient(
-        135deg,
-        #6b4f3f,
-        #8a6a52
-      );
+/* cube */
+.cube{
+    width:100%;
+    height:100%;
+    position:absolute;
+    transform-style:preserve-3d;
+    animation:spin 8s infinite linear;
+}
 
-      color: #f5f1ec;
-      border-radius: 22px;
+/* cube faces */
+.face{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:linear-gradient(145deg,#ff6655,#ff8899);
+    border:2px solid rgba(0,0,0,0.2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+}
 
-      box-shadow:
-        0 18px 40px rgba(0,0,0,.45),
-        inset 0 1px 0 rgba(255,255,255,.15);
-    }
+/* positioning */
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-    .hero-card h1{
-      font-size: 32px;
-      color: #fdf6ee;
-      margin-bottom: 18px;
-    }
+@keyframes spin{
+    from{ transform:rotateX(0) rotateY(0); }
+    to{ transform:rotateX(360deg) rotateY(360deg); }
+}
 
-    .hero-card p{
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    .hero-small{
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    @media(max-width:600px){
-      .hero-card{
-        padding: 26px 18px;
-      }
-      .hero-card h1{
-        font-size: 26px;
-      }
-    }
-  </style>
+</style>
 </head>
 
+<body>
+<div class="scene">
+    <div class="cube">
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="home">
+        <div class="face front">WE》</div>
+        <div class="face back">WE《</div>
+        <div class="face right">♧</div>
+        <div class="face left">WE》</div>
+        <div class="face top">deliver</div>
+        <div class="face bottom">♤</div>
 
-<!-- BRAND -->
-
-<header class="brand">
-
-  <div class="hero-card">
-<!-- LOGO -->
-    <img src="image/Imag/logo.png" alt="We Delivery Logo" class="hero-logo">
-
-  <h1>WE 》 DELIVERY</h1>
-  <p>♧karibu kwenye platform inyohusika na usambazaji♧</p>
-  <p>♧ndani ya chuo cha UDOM ndaki ya humanities♧</p>
-  <p>♧Usambazaji wa chakula, maji na ubebaji mizigo♧</p>
-  <p class="hero-small">♧kurequest usafiri wa haraka♧</p>
-  </div>
-
-</header>
-
-<div class="suppliers-link">
-  <a href="suppliers.html">SUPPLIERS 》</a>
+    </div>
 </div>
+<script>
 
-<!-- FOODS -->
+/* baada ya sekunde 6 open page nyingine */
+setTimeout(function(){
+    window.location.href="home.html";
+},6000);
 
-<main id="foods">
-
-<div class="food-card" data-id="1" data-name="biriani-kuku" data-price="4000">
-  <img src="image/Imag/birianikuku.jpg" alt="biriani kuku">
-  <div class="food-name">biriani kuku ♧ TZS 4000</div>
-</div>
-
-<div class="food-card" data-id="2" data-name="biriani-nyama" data-price="3000">
-  <img src="image/Imag/birianinyama.jpg" alt="biriani nyama">
-  <div class="food-name">biriani nyama ♧ TZS 3000</div>
-</div>
-
-<div class="food-card" data-id="3" data-name="Wali na Mboga" data-price="1500">
-  <img src="image/Imag/walimbogaa.jpg" alt="wali">
-  <div class="food-name">Wali na Mboga ♧ TZS 1500</div>
-</div>
-
-<div class="food-card" data-id="4" data-name="Pilau" data-price="2000">
-  <img src="image/Imag/pilau.jpg" alt="pilau">
-  <div class="food-name">Pilau ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="5" data-name="Ugali Mboga" data-price="2000">
-  <img src="image/Imag/ugalimichuzi.jpg" alt="ugali">
-  <div class="food-name">Ugali Mboga ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="6" data-name="ugali choma" data-price="2000">
-  <img src="image/Imag/choma.jpg" alt="ugali choma">
-  <div class="food-name">Choma ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="7" data-name="Ugali Mishkaki" data-price="2000">
-  <img src="image/Imag/ugalimishikaki.jpg" alt="ugali mishkaki">
-  <div class="food-name">Ugali Mishkaki ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="8" data-name="Ugali Samaki" data-price="2800">
-  <img src="image/Imag/ugalisamaki.jpg" alt="ugali samaki">
-  <div class="food-name">Ugali Samaki ♧ TZS 2800</div>
-</div>
-
-<div class="food-card" data-id="9" data-name="Ugali Mayai" data-price="2000">
-  <img src="image/Imag/ugaliyai.jpg" alt="ugali yai">
-  <div class="food-name">Ugali Mayai ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="10" data-name="Chips" data-price="2000">
-  <img src="image/Imag/chipskuku.jpg" alt="chips">
-  <div class="food-name">Chips ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="11" data-name="Chips Zege" data-price="3000">
-  <img src="image/Imag/chipszegee.jpg" alt="zege">
-  <div class="food-name">Chips Zege ♧ TZS 3000</div>
-</div>
-
-<div class="food-card" data-id="12" data-name="Sharifu" data-price="1000">
-  <img src="image/Imag/sharif.jpeg" alt="sharif">
-  <div class="food-name">Sharifu ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="13" data-name="Urojo" data-price="2500">
-  <img src="image/Imag/urojo.jpg" alt="urojo">
-  <div class="food-name">Urojo ♧ TZS 2500</div>
-</div>
-
-<div class="food-card" data-id="14" data-name="Kuku" data-price="9000">
-  <img src="image/Imag/kukumzima.jpeg" alt="kuku mzima">
-  <div class="food-name">Kuku ♧ TZS 9000</div>
-</div>
-
-<div class="food-card" data-id="15" data-name="kuku-robo" data-price="2000">
-  <img src="image/Imag/kukurobo.jpeg" alt="kuku robo">
-  <div class="food-name">kuku-robo ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="16" data-name="Juice" data-price=1000">
-  <img src="image/Imag/Juice.jpeg" alt="juice">
-  <div class="food-name">Juice ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="17" data-name="Tambi Maharage" data-price="2000">
-  <img src="image/Imag/tambi.jpg" alt="tambi">
-  <div class="food-name">Tambi Maharage ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="18" data-name="ndizi" data-price="2000">
-  <img src="image/Imag/ndizi.jpg" alt="ndizi">
-  <div class="food-name">ndizi ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="19" data-name="Makande" data-price="2000">
-  <img src="image/Imag/makande.jpg" alt="makande">
-  <div class="food-name">Makande ♧ TZS 2000</div>
-</div>
-
-<div class="food-card" data-id="20" data-name="Maziwa Fresh" data-price="1000">
-  <img src="image/Imag/maziwa.jpeg" alt="maziwa">
-  <div class="food-name">Maziwa Fresh ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="21" data-name="Mayai Katresi" data-price="500">
-  <img src="image/Imag/katresi.jpg" alt="katresi">
-  <div class="food-name">Mayai Katresi ♧ TZS 500</div>
-</div>
-
-<div class="food-card" data-id="22" data-name="Mayai Chemsha" data-price="500">
-  <img src="image/Imag/yai.jpg" alt="yai">
-  <div class="food-name">Mayai Chemsha ♧ TZS 500</div>
-</div>
-
-<div class="food-card" data-id="23" data-name="eggchop" data-price="1000">
-  <img src="image/Imag/eggchop.jpg" alt="eggchop">
-  <div class="food-name">eggchop ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="24" data-name="Chai" data-price="500">
-  <img src="image/Imag/chai.jpeg" alt="chai">
-  <div class="food-name">Chai ♧ TZS 500</div>
-</div>
-
-<div class="food-card" data-id="25" data-name="Chapati" data-price="500">
-  <img src="image/Imag/chapati.jpg" alt="chapati">
-  <div class="food-name">Chapati ♧ TZS 500</div>
-</div>
-
-<div class="food-card" data-id="26" data-name="supu" data-price="1000">
-  <img src="image/Imag/Supu.jpg" alt="supu">
-  <div class="food-name">supu ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="27" data-name="Matunda" data-price="1000">
-  <img src="image/Imag/matunda.jpg" alt="matunda">
-  <div class="food-name">Matunda ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="28" data-name="Maji Baridi" data-price="1000">
-  <img src="image/Imag/majimadogo.jpeg" alt="maji">
-  <div class="food-name">Maji Baridi ♧ TZS 1000</div>
-</div>
-
-<div class="food-card" data-id="29" data-name="mishikaki" data-price="500">
-  <img src="image/Imag/mishikaki.jpg" alt="mishikaki">
-  <div class="food-name">mishikaki ♧ TZS 500</div>
-</div>
-
-<div class="food-card" data-id="30" data-name="samaki" data-price="2000">
-  <img src="image/Imag/sangara.jpg" alt="samaki">
-  <div class="food-name">samaki ♧ TZS 2000</div>
-</div>
-
-</main>
-
-
-
-<div id="cart-bar">
-  🛒 <span id="cart-count">0</span> |
-  <span id="cart-total">TSH 0</span>
-</div>
-
-
-
-<!-- WATER & CARGO -->
-<section class="utility">
-  <div class="utility-card">
-   <div class="service-card" id="water-card" onclick="location.href='services.html'">
-    <h2>Maji & Mizigo</h2>
-    <p>Maji • Mizigo • Abiria</p>
-   </div>
-  </div>
-</section>
-
-<!-- SHOPS (DISABLED) -->
-<section class="shops">
-  <div class="shop-card">
-    <h2>Shops (Coming Soon)</h2>
-  </div>
-</section>
-
-<!-- CART DRAWER -->
-<div id="cart-drawer">
-  <div class="cart-header">Cart</div>
-  <div id="cart-items"></div>
-</div>
-<div class="cart-actions">
-  <button id="confirm-order" class="cart-btn">
-    CONFIRM ORDER
-  </button>
-</div>
-
-<footer>
- <h1> jorion // we deliver</h1>
- <h2> ♧future is not yours to experience♧</h2>
-   <p>📞 0719343615</p>
-   <p>📩jopankjorion@gmail.com</p>
-   <p>♤</p>
-</footer>
-
-<script src="app.js"></script>
+</script>
 </body>
 </html>
