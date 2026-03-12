@@ -72,7 +72,7 @@ body {
   border-radius: 14px;
   border: none;
   background: linear-gradient (90deg, #ffb84d, #ff9500);
-  color: #000;
+  color: #ff9500;
   font-weight: 700;
   cursor: pointer;
   transition: background .2s ease, transform .1s ease;
@@ -200,12 +200,12 @@ box-shadow:0 6px 18px rgba(255,184,77,.4)
 }
 
 .sub-header h1{
-  color:#0d6efd;
-  margin-bottom:6px;
+  color: #ffb84d;
+  margin-bottom: 6px;
 }
 
 .sub-header p{
-  color:#aaa;
+  color: #888;
   font-size:.9rem;
 }
 
@@ -748,11 +748,11 @@ body.black{
   justify-content: space-between;
   gap: 40px;
 
-  background: gold;
+  background: dimgrey;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  border: 1px solid darkgoldenrod;
+  border: 1px solid beige;
   border-radius: 24px;
 
   box-shadow: 0 20px palegoldenrod;
