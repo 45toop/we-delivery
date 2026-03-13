@@ -34,7 +34,7 @@
   <input id="room" placeholder="Room No (mf. 214)" />
 </div>
 
-  <div class="supplier-card" onclick="sendOrder('jorion','+255756759577">
+  <div class="supplier-card" onclick="sendOrder('jorion','+255756759577')">
     <h3>jorion 1</h3>
     <p>chuo</p>
     <strong>+255 756759577</strong>
@@ -46,16 +46,16 @@
     <strong>+255 756759577</strong>
   </div>
 
-  <div class="supplier-card" onclick="sendOrder('jorion','+255756759577')">
-    <h3>jorion 3</h3>
+  <div class="supplier-card" onclick="sendWhatsApp('jorion','255719343615')">
+    <h3>jorion. whatsApp</h3>
     <p>chuo</p>
-    <strong>+255 756759577</strong>
+    <strong>255 719343615</strong>
   </div>
 
 </main>
 
 <script>
-function sendOrder(name, phone){
+function buildMessage(){
   const cart = JSON.parse(localStorage.getItem("we_order")) || [];
 
   const block = document.getElementById("block").value || "N/A";
@@ -71,7 +71,30 @@ function sendOrder(name, phone){
     text += `- ${item.name} (${item.price} TZS)%0A`;
   });
 
-  window.location.href = `sms:${phone}?body=${text}`;
+  return text;
+}
+
+/* SMS */
+
+function sendOrder(name, phone){
+
+let text = buildMessage();
+
+window.location.href =
+`sms:${phone}?body=${encodeURIComponent(text)}`;
+
+}
+
+
+/* WHATSAPP */
+
+function sendWhatsApp(name, phone){
+
+let text = buildMessage();
+
+window.location.href =
+`https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
 }
 </script>
 

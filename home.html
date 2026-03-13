@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
 
   <title>WE 》 DELIVERY</title>
 
@@ -60,11 +60,11 @@
       }
     }
   </style>
-</head>
 
-
+  <link rel="preload" href="image/Imag/logo.png" as="image">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 
 <body class="home">
@@ -132,152 +132,242 @@
      </section>
 
 <main id="foods">
-<div class="food-card" data-id="1" data-name="biriani-kuku" data-price="4000">
+<div class="food-card" data-id="1" data-name="biriani-kuku" data-price="4000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/birianikuku.jpg" alt="biriani kuku">
   <div class="food-name">biriani kuku ♧ TZS 4000</div>
 </div>
 
-<div class="food-card" data-id="2" data-name="biriani-nyama" data-price="3000">
+<div class="food-card" data-id="2" data-name="biriani-nyama" data-price="3000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/birianinyama.jpg" alt="biriani nyama">
   <div class="food-name">biriani nyama ♧ TZS 3000</div>
 </div>
 
-<div class="food-card" data-id="3" data-name="Wali na Mboga" data-price="1500">
+<div class="food-card" data-id="3" data-name="Wali na Mboga" data-price="1500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/walimbogaa.jpg" alt="wali">
   <div class="food-name">Wali na Mboga ♧ TZS 1500</div>
 </div>
 
-<div class="food-card" data-id="4" data-name="Pilau" data-price="2000">
+<div class="food-card" data-id="4" data-name="Pilau" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/pilau.jpg" alt="pilau">
   <div class="food-name">Pilau ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="5" data-name="Ugali Mboga" data-price="2000">
+<div class="food-card" data-id="5" data-name="Ugali Mboga" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/ugalimichuzi.jpg" alt="ugali">
   <div class="food-name">Ugali Mboga ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="6" data-name="ugali choma" data-price="2000">
+<div class="food-card" data-id="6" data-name="ugali choma" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/choma.jpg" alt="ugali choma">
   <div class="food-name">Choma ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="7" data-name="Ugali Mishkaki" data-price="2000">
+<div class="food-card" data-id="7" data-name="Ugali Mishkaki" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/ugalimishikaki.jpg" alt="ugali mishkaki">
   <div class="food-name">Ugali Mishkaki ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="8" data-name="Ugali Samaki" data-price="2800">
+<div class="food-card" data-id="8" data-name="Ugali Samaki" data-price="2800"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/ugalisamaki.jpg" alt="ugali samaki">
   <div class="food-name">Ugali Samaki ♧ TZS 2800</div>
 </div>
 
-<div class="food-card" data-id="9" data-name="Ugali Mayai" data-price="2000">
+<div class="food-card" data-id="9" data-name="Ugali Mayai" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/ugaliyai.jpg" alt="ugali yai">
   <div class="food-name">Ugali Mayai ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="10" data-name="Chips" data-price="2000">
+<div class="food-card" data-id="10" data-name="Chips" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/chipskuku.jpg" alt="chips">
   <div class="food-name">Chips ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="11" data-name="Chips Zege" data-price="3000">
+<div class="food-card" data-id="11" data-name="Chips Zege" data-price="3000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/chipszegee.jpg" alt="zege">
   <div class="food-name">Chips Zege ♧ TZS 3000</div>
 </div>
 
-<div class="food-card" data-id="12" data-name="Sharifu" data-price="1000">
+<div class="food-card" data-id="12" data-name="Sharifu" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/sharif.jpeg" alt="sharif">
   <div class="food-name">Sharifu ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="13" data-name="Urojo" data-price="2500">
+<div class="food-card" data-id="13" data-name="Urojo" data-price="2500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/urojo.jpg" alt="urojo">
   <div class="food-name">Urojo ♧ TZS 2500</div>
 </div>
 
-<div class="food-card" data-id="14" data-name="Kuku" data-price="9000">
+<div class="food-card" data-id="14" data-name="Kuku" data-price="9000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/kukumzima.jpeg" alt="kuku mzima">
   <div class="food-name">Kuku ♧ TZS 9000</div>
 </div>
 
-<div class="food-card" data-id="15" data-name="kuku-robo" data-price="2000">
+<div class="food-card" data-id="15" data-name="kuku-robo" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/kukurobo.jpeg" alt="kuku robo">
   <div class="food-name">kuku-robo ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="16" data-name="Juice" data-price=1000">
+<div class="food-card" data-id="16" data-name="Juice" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/Juice.jpeg" alt="juice">
   <div class="food-name">Juice ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="17" data-name="Tambi Maharage" data-price="2000">
+<div class="food-card" data-id="17" data-name="Tambi Maharage" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/tambi.jpg" alt="tambi">
   <div class="food-name">Tambi Maharage ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="18" data-name="ndizi" data-price="2000">
+<div class="food-card" data-id="18" data-name="ndizi" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/ndizi.jpg" alt="ndizi">
   <div class="food-name">ndizi ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="19" data-name="Makande" data-price="2000">
+<div class="food-card" data-id="19" data-name="Makande" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/makande.jpg" alt="makande">
   <div class="food-name">Makande ♧ TZS 2000</div>
 </div>
 
-<div class="food-card" data-id="20" data-name="Maziwa Fresh" data-price="1000">
+<div class="food-card" data-id="20" data-name="Maziwa Fresh" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/maziwa.jpeg" alt="maziwa">
   <div class="food-name">Maziwa Fresh ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="21" data-name="Mayai Katresi" data-price="500">
+<div class="food-card" data-id="21" data-name="Mayai Katresi" data-price="500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/katresi.jpg" alt="katresi">
   <div class="food-name">Mayai Katresi ♧ TZS 500</div>
 </div>
 
-<div class="food-card" data-id="22" data-name="Mayai Chemsha" data-price="500">
+<div class="food-card" data-id="22" data-name="Mayai Chemsha" data-price="500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/yai.jpg" alt="yai">
   <div class="food-name">Mayai Chemsha ♧ TZS 500</div>
 </div>
 
-<div class="food-card" data-id="23" data-name="eggchop" data-price="1000">
+<div class="food-card" data-id="23" data-name="eggchop" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/eggchop.jpg" alt="eggchop">
   <div class="food-name">eggchop ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="24" data-name="Chai" data-price="500">
+<div class="food-card" data-id="24" data-name="Chai" data-price="500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/chai.jpeg" alt="chai">
   <div class="food-name">Chai ♧ TZS 500</div>
 </div>
 
-<div class="food-card" data-id="25" data-name="Chapati" data-price="500">
+<div class="food-card" data-id="25" data-name="Chapati" data-price="500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/chapati.jpg" alt="chapati">
   <div class="food-name">Chapati ♧ TZS 500</div>
 </div>
 
-<div class="food-card" data-id="26" data-name="supu" data-price="1000">
+<div class="food-card" data-id="26" data-name="supu" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/Supu.jpg" alt="supu">
   <div class="food-name">supu ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="27" data-name="Matunda" data-price="1000">
+<div class="food-card" data-id="27" data-name="Matunda" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/matunda.jpg" alt="matunda">
   <div class="food-name">Matunda ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="28" data-name="Maji Baridi" data-price="1000">
+<div class="food-card" data-id="28" data-name="Maji Baridi" data-price="1000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/majimadogo.jpeg" alt="maji">
   <div class="food-name">Maji Baridi ♧ TZS 1000</div>
 </div>
 
-<div class="food-card" data-id="29" data-name="mishikaki" data-price="500">
+<div class="food-card" data-id="29" data-name="mishikaki" data-price="500"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/mishikaki.jpg" alt="mishikaki">
   <div class="food-name">mishikaki ♧ TZS 500</div>
 </div>
 
-<div class="food-card" data-id="30" data-name="samaki" data-price="2000">
+<div class="food-card" data-id="30" data-name="samaki" data-price="2000"
+loading="lazy"
+class="skeleton"
+onload="this.classList.remove('skeleton')">
   <img src="image/Imag/sangara.jpg" alt="samaki">
   <div class="food-name">samaki ♧ TZS 2000</div>
 </div>
@@ -308,70 +398,61 @@
   
 
 <!-- WATER & CARGO -->
-   <section class="utility">
-   <div class="utility-card">
-   <div class="service-card" id="water-card">
-         
-     <div class="service-big" onclick="sendSMS('Nahitaji delivery ya maji')">
-         <img src="image/Imag/ndoo.png" alt="maji">
-          <h2>MAJI</h2>
-          <p>Ndoo • Dumu •</p>
-     </div>
+ 
+<section class="utility">
+<div class="utility-card">
+<div class="service-card" id="water-card">
 
-     <p>♧</p>
-      
-     <div class="service-big" onclick="sendSMS('kubeba mizigo')">
-      <img src="image/Imag/mizigo.jpg" alt="begi">
-         <h2>MIZIGO</h2>
-         <p>Mizigo mizito</p>
-     </div>
-     
-     <p>♧</p>
-     
-     <div class="service-big" onclick="sendSMS('Nahitaji bodaboda- abiria')">
-       <img src="image/Imag/bodaboda.jpeg" alt="boda">
-        <h2>ABIRIA</h2>
-        <p>Bodaboda • Safari za karibu</p>
-     </div>
-    
-     <script>
-            function sendOrder(name, phone){
+<div class="service-big" onclick="sendSMS('Nahitaji delivery ya maji')">
+<img src="image/Imag/ndoo.png" alt="maji">
+<h2>MAJI</h2>
+<p>Ndoo • Dumu •</p>
+</div>
 
-  const block = document.getElementById("block")?.value || "N/A";
-  const room = document.getElementById("room")?.value || "N/A";
+<p>♧</p>
 
-  let text = "WE DELIVERY REQUEST\n\n";
+<div class="service-big" onclick="sendSMS('Nahitaji kubeba mizigo')">
+<img src="image/Imag/mizigo.jpg" alt="begi">
+<h2>MIZIGO</h2>
+<p>Mizigo mizito</p>
+</div>
 
-  // Kama ni abiria
-  if(serviceType === "boda"){
-    
-    text += bodyMessage + "\n\n";
-    text += "Pickup Location:\n";
-    text += "Block: " + block + "\n";
-    text += "Room: " + room + "\n";
+<p>♧</p>
 
-  } else {
+<div class="service-big" onclick="sendSMS('Nahitaji bodaboda kwa abiria')">
+<img src="image/Imag/bodaboda.jpeg" alt="boda">
+<h2>ABIRIA</h2>
+<p>Bodaboda • Safari za karibu</p>
+</div>
 
-    // Kama ni maji
-    if(servicesType === "maji"){
-    
-    text += bodymessage + "\n\n";
-    text += "Location:\n";
-    text += "Block: " + block + "\n";
-    text += "Room: " + room + "\n\n";
-    text += "Items:\n";}
+<script>
 
-         }
+function sendSMS(message){
 
-  window.location.href =
-    `sms:${phone}?body=${encodeURIComponent(text)}`;
-         }
+const block = document.getElementById("block")?.value || "N/A";
+const room = document.getElementById("room")?.value || "N/A";
+
+let text = "WE DELIVERY REQUEST\n\n";
+
+text += message + "\n\n";
+
+text += "Location:\n";
+text += "Block: " + block + "\n";
+text += "Room: " + room + "\n";
+
+const phone = "255719343615";
+
+window.location.href =
+`sms:${phone}?body=${encodeURIComponent(text)}`;
+
+}
+
 </script>
-       
-   </div>
-   </div>
-   </section>
-  
+
+</div>
+</div>
+</section>
+
 
 <section class="hero-image">
   <img src="image/Imag/jie.jpeg" alt="delivery bag">
@@ -436,6 +517,6 @@
    <div class="city"></div>
 </section>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
