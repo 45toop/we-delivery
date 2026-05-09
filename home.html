@@ -61,6 +61,39 @@
     }
   </style>
 
+  <style>
+body {
+  background: #000;
+  color: goldenrod;
+  font-family: Arial;
+}
+
+.container {
+  overflow-x: auto;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  min-width: 300px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: darkgoldenrod;
+}
+</style>
+
   <link rel="preload" href="image/Imag/logo.png" as="image">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
@@ -83,31 +116,47 @@
   <img src="image/Imag/jia.jpeg" alt="delivery bag">
 </section>
 
+<section>
+<h1 style="text-align:center;"> Rahisi kutumia </h1>
+
+<div class="container">
+  <div class="card">
+    <h3>Picha ya chakula</h3>
+    <p>Gusa kadi ya chakula unachotaka.</p>
+    <p>ukimaliza gusa cart kuangalia machaguzi.</p>
+  </div>
+
+  <div class="card">
+    <h3>Button ya Cart</h3>
+    <p>Jumla ya bei na bidhaa ulizo chagua.</p>
+    <p>Kuangalia gusa button na kutoka gusa tena button. </p>
+  </div>
+
+  <div class="card">
+    <h3>Buttorn ya Confirm </h3>
+    <p>Itakupeleka moja kwa moja upande wa kujaza taarifa.</p>
+    <p>Weka taarifa zako kisha chagua Jorion 1,2, au 3 mtumie sms.</p>
+  </div>
+  
+  <div class="card">
+    <h4>Uhuru wa kubadili </h4>
+    <p>Unaweza badilisha bei ya chakula kulingana na uhitaji wako ukiwa unatuma sms.</p>
+  </div>
+  
+  <div class="card">
+    <h5>Furahia huduma zetu.</h5>
+  </div>
+</div>
+
+</section>
+
    <section class="glass-section">
     <div class="glass-content">
     <div class="glass-text">
-      <p> Gusa picha ya chakula unachotaka</p>
-      <h2>¤</h2>
-      <p> button ya cart kushoto inaonyesha jumla ya vitu na pesa </p>
-      <h2>¤</h2>
-      <p> ukimaliza kuchagua unaweza uka-click button ya cart ukaangalia idadi ya vitu na unaweza kupunguza<br>🚮</p>
-      <h2>¤</h2>
-      <p> bonyeza comfirm️,itakupeleka kujaza taarifa zako📝 </p>
-      <h2>¤</h2>
-      <p> 💁<br>chagua jorion 1 au 2 au 3 kisha utatuma sms </p>
-      <h2>¤</h2>
-      <p> upande wa sms kwa simu yako unaweza badili gharama au ukaongeza chochote uletwe🤗 </p>
-      <h2>¤</h2>
-      <p> HUDUMA YA WHATSAPP IPO NJIANI</p>
-      <h2>♤</h2>
-    </div>
-
     <div class="glass-illustration">
-      <div class="delivery-bag"></div>
+    <div class="delivery-bag"></div>
     </div>
-
-  </div>
-
+    </div>
    </section>
 
 
@@ -121,7 +170,7 @@
 
                       <!-- FOODS -->
      <section>
-       <div class="food-name">CARD ZA VYAKULA NA BEI ELEKEZI</div>
+       <h1 style="text-align:center;"> chagua tukuletee.</h1>
      </section>
 
 <div class="green-line"></div>
@@ -384,17 +433,16 @@ onload="this.classList.remove('skeleton')">
     <div class="green-line"></div>
 
     <section>
-     <div class="food-name">HUDUMA NYINGINE KAMA HIZI NAZO ZIPO.💬</div>
+<h1 style="text-align:center;"> scroll, huduma hizi unapata pia.</h1>
     </section>
   
 
 <!-- WATER & CARGO -->
  
-<section class="utility">
-<div class="utility-card">
-<div class="service-card" id="water-card">
+<section>
+<div class="container">
 
-<div class="service-big" onclick="sendSMS('Nahitaji delivery ya maji')">
+<div class="card" onclick="sendSMS('Nahitaji delivery ya maji')">
 <img src="image/Imag/ndoo.png" alt="maji">
 <h2>MAJI</h2>
 <p>Ndoo • Dumu •</p>
@@ -402,7 +450,7 @@ onload="this.classList.remove('skeleton')">
 
 <p>♧</p>
 
-<div class="service-big" onclick="sendSMS('Nahitaji kubeba mizigo')">
+<div class="card" onclick="sendSMS('Nahitaji kubeba mizigo')">
 <img src="image/Imag/mizigo.jpg" alt="begi">
 <h2>MIZIGO</h2>
 <p>Mizigo mizito</p>
@@ -410,7 +458,7 @@ onload="this.classList.remove('skeleton')">
 
 <p>♧</p>
 
-<div class="service-big" onclick="sendSMS('Nahitaji bodaboda kwa abiria')">
+<div class="card" onclick="sendSMS('Nahitaji bodaboda')">
 <img src="image/Imag/bodaboda.jpeg" alt="boda">
 <h2>ABIRIA</h2>
 <p>Bodaboda • Safari za karibu</p>
@@ -434,13 +482,12 @@ text += "Room: " + room + "\n";
 const phone = "255719343615";
 
 window.location.href =
-`sms:${phone}?body=${encodeURIComponent(text)}`;
+`sms:${0719343615}?body=${encodeURIComponent(text)}`;
 
 }
 
 </script>
 
-</div>
 </div>
 </section>
 
